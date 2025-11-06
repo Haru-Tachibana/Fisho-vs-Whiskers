@@ -7,9 +7,9 @@ A simple 1v1 card battle web game (User vs AI), but cute ≽^•⩊•^≼
 ### Basic Rules
 
 - **Cards**: 54 cards (standard 52 + 2 jokers)
-- **Hidden pool**: 10, 12, 14, 16, 18, or 20 random cards removed each game (unseen by both sides)
+- **Hidden pool**: 10, 12, 14, 16, 18, or 20 random cards removed each game (unseen by both sides, so you can't remorise all the cards :3)
 - **Hands**: Player and AI each get an equal share of the remaining cards
-- **Goal**: Be first to empty your hand
+- **Goal**: Simple - Be first to empty your hand!!
 
 ### Valid Combinations
 
@@ -18,8 +18,6 @@ A simple 1v1 card battle web game (User vs AI), but cute ≽^•⩊•^≼
 - **Pair**: Two cards of the same rank
 - **Triple**: Three cards of the same rank
 - **Bomb**: Four cards of the same rank (beats everything except bigger bombs)
-
-**Advanced Combinations:**
 - **Sequence**: 5+ consecutive cards in order (3-10, J, Q, K only). Each value appears once.
   - Example: 6-7-8-9-10
   - To beat: Same length, starting from a higher card (e.g., 8-9-10-J-Q beats 6-7-8-9-10)
