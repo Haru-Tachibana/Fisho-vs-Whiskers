@@ -121,8 +121,8 @@ Update `API_BASE` in `frontend/app.js` if backend URL differs.
 
 ## Assets & Credits
 
-* **Background Music:** Pixabay
-* **Sound Effects:** Mixkit
+* **Background Music:** [Pixabay](https://pixabay.com/)
+* **Sound Effects:** [Mixkit](https://mixkit.co/free-sound-effects/)
 * **Font:** [Barriecito](https://fonts.google.com/specimen/Barriecito) (Google Fonts)
 
 *Design note:* All assets were chosen for a playful, whimsical tone to match the lighthearted theme of the game.
