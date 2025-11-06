@@ -545,13 +545,13 @@ function renderLastPlay(cards, player) {
     });
     
     if (player && lastPlayerDiv) {
-        lastPlayerDiv.textContent = `Played by: ${player === 'player' ? 'You' : 'AI'}`;
+        lastPlayerDiv.textContent = `Played by: ${player === 'player' ? 'You' : 'Whiskers'}`;
     }
 }
 
 function showWinner(winner) {
     if (winnerText) {
-        winnerText.textContent = winner === 'player' ? 'You Win!' : 'AI Wins!';
+        winnerText.textContent = winner === 'player' ? 'You Win!' : 'Whiskers Wins!';
     }
     if (winnerModal) {
         winnerModal.style.display = 'flex';
