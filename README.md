@@ -1,6 +1,6 @@
 # Fisho vs Whiskers — When Cards Collide and Chaos Ensues
 
-A simplified Doudizhu-inspired 1v1 card battle web game (User vs AI).
+A simple 1v1 card battle web game (User vs AI), but cute ≽^•⩊•^≼
 
 ## Gameplay
 
