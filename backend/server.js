@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { Game } from './game/game.js';
 import { chooseAIMove } from './ai/heuristic_ai.js';
 import { getContextualMessage } from './ai/ai_messages.js';
@@ -7,6 +9,9 @@ import { generatePlayerMessage } from './ai/player_messages.js';
 import { WELCOME_MESSAGES } from './ai/welcome_message.js';
 
 export const AI_RIVAL_NAME = 'Whiskers';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let welcomeShown = false;
 
@@ -18,6 +23,8 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 const games = new Map();
 
@@ -308,6 +315,10 @@ app.get('/health', (req, res) => {
 
 app.get('/api/rules', (req, res) => {
   res.json(WELCOME_MESSAGES);
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/index.html'));
 });
 
 app.listen(PORT, () => {

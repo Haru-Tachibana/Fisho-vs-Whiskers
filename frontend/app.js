@@ -1,6 +1,6 @@
 import { playCardHover, playCardClick, playButtonClick, playBGM, stopBGM, playChatMessage, toggleMute, getMuteState } from './sounds.js';
 
-const API_BASE = 'http://localhost:3002/api';
+const API_BASE = window.location.origin + '/api';
 
 let currentGameId = null;
 let selectedCardIds = new Set();
