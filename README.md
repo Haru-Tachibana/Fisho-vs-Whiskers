@@ -6,10 +6,10 @@
 
 ## Overview
 
-**Fisho vs Whiskers** is a simple 1v1 card battle game (User vs AI) where both sides aim to be the first to empty their hands. Built as a small web-based experience, the project emphasizes:
+**Fisho vs Whiskers** is a simple 1v1 card battle game (User vs AI) where both sides aim to be the first to empty their hands. Built as a small web-based experience, the project emphasises:
 
 * Fast-paced gameplay
-* Simple yet strategic mechanics
+* Simple but strategic mechanics
 * A cute, fun theme for casual players
 
 This document explains not just the *how*, but also the *why* behind design and implementation decisions.
@@ -21,9 +21,9 @@ This document explains not just the *how*, but also the *why* behind design and 
 ### Basic Rules
 
 * **Deck:** 54 cards (standard 52 + 2 jokers).
-* **Hidden Pool:** At the start of each game, **10–20 random cards** are removed unseen by both players.
+* **Hidden Pool:** At the start of each game, **10–20 random cards** are removed unseen by both players (even numbers, to ensure each party can get same amont of cards for fairness).
 
-  * *Reason:* Adds unpredictability and prevents perfect memorization, keeping gameplay fresh.
+  * *Reason:* Adds unpredictability and prevents perfect memorisation, keeping gameplay fresh.
 * **Hands:** The remaining cards are split evenly between Player and AI.
 * **Goal:** Be the first to empty your hand!
 
@@ -54,11 +54,11 @@ This document explains not just the *how*, but also the *why* behind design and 
 
 ---
 
-## AI Behavior (Conceptual)
+## AI Behaviour (Conceptual)
 
 The AI makes decisions based on:
 
-* Hand value scoring (prioritizing smaller plays early)
+* Hand value scoring (prioritising smaller plays early)
 * Simple probability-based estimation (without seeing hidden cards)
 * Optional difficulty scaling via random error factor
 
@@ -82,41 +82,6 @@ docker-compose up -d
 # Backend API: http://localhost:3002
 ```
 
-### Option 2: Manual Setup
-
-#### Backend
-
-```bash
-cd backend
-npm install
-export GROQ_API_KEY=your_groq_api_key  # optional - get one free from https://console.groq.com
-export PORT=3002
-node server.js
-```
-
-Access via **[http://localhost:3002](http://localhost:3002)**
-
-#### Frontend
-
-Open `frontend/index.html` directly or serve via local server:
-
-**Option A — Python**
-
-```bash
-cd frontend
-python3 -m http.server 8000
-```
-
-**Option B — Node.js**
-
-```bash
-npx http-server frontend -p 8000
-```
-
-Visit **[http://localhost:8000](http://localhost:8000)**
-
-Update `API_BASE` in `frontend/app.js` if backend URL differs.
-
 ---
 
 ## Assets & Credits
@@ -134,7 +99,7 @@ Update `API_BASE` in `frontend/app.js` if backend URL differs.
 | Feature                   | Description                           | Design Rationale                           |
 | ------------------------- | ------------------------------------- | ------------------------------------------ |
 | **Multiplayer (PVP)**     | Real-time or turn-based online mode   | Expands replay value & community           |
-| **Coin Flip to Start**    | Randomize which player begins         | Adds fairness & tension                    |
+| **Coin Flip to Start**    | Randomise which player begins         | Adds fairness & tension                    |
 | **Leaderboards**          | Track global or local win streaks     | Boosts competitiveness                     |
 | **Achievements / Badges** | e.g. “Bomb Master” or “Fast Finisher” | Increases player retention                 |
 | **Daily Challenges**      | Unique rule modifiers each day        | Keeps gameplay varied                      |
@@ -147,13 +112,12 @@ Update `API_BASE` in `frontend/app.js` if backend URL differs.
 
 * **Frontend:** Vanilla JS + simple HTML/CSS for accessibility and portability.
 * **Backend:** Node.js API (lightweight game state manager).
-* **AI Engine:** Deterministic with randomized decision branches for replay variability.
+* **AI Engine:** Deterministic with randomised decision branches for replay variability.
 * **Deployment:** Docker for seamless environment management and isolation.
 
 *Decision reasoning:*
 
 * Keeping tech stack minimal ensures the project runs locally with zero dependencies beyond Node and Docker.
-* Avoiding heavy frameworks helps new contributors and students learn from a transparent, readable codebase.
 
 ---
 
@@ -165,4 +129,3 @@ Update `API_BASE` in `frontend/app.js` if backend URL differs.
 2. **Cute enough to make players smile.**
 3. **Strategic enough to keep them coming back.**
 
-From the random hidden pool mechanic to the clean deployment setup, each choice supports the core vision: **easy to play, hard to master, and always a little chaotic.**
