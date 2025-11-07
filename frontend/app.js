@@ -454,7 +454,7 @@ function renderPlayerCards() {
         // Style jokers differently
         if (card.rank === 'Joker') {
             rankEl.classList.add('joker-small');
-            rankEl.textContent = 'Joker';
+            rankEl.textContent = 'joker';
         } else if (card.rank === 'JOKER') {
             rankEl.classList.add('joker-big');
             rankEl.textContent = 'JOKER';
@@ -524,7 +524,7 @@ function renderLastPlay(cards, player) {
         // Style jokers differently
         if (card.rank === 'Joker') {
             rankEl.classList.add('joker-small');
-            rankEl.textContent = 'Joker';
+            rankEl.textContent = 'joker';
         } else if (card.rank === 'JOKER') {
             rankEl.classList.add('joker-big');
             rankEl.textContent = 'JOKER';
